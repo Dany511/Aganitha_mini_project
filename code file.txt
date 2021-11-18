@@ -1,0 +1,12 @@
+Code for setting up postgres and importing dataset
+docker pull postgres
+docker run --name postgres -e POSTGRES_PASSWORD=password –p 5432:5432 –d postgres
+docker ps
+docker exec -it postgres psql -U postgres
+create database db;
+\c
+create table tb(…………..)
+\copy tb from [path] DELIMITER ‘,’ CSV HEADER;
+Code for setting up jupyter container
+docker run -p 8888:8888 jupyter/scipy-notebook
+docker run –it –d jupyter/scipy-notebook
